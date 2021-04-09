@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-burger.component.scss']
 })
 export class NavBurgerComponent implements OnInit {
+  private burger!: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  myFunction() {
+    this.burger = document.getElementById("myLinks");
+    if (this.burger.style.display === "block") {
+      this.burger.style.display = "none";
+    } else {
+      this.burger.style.display = "block";
+    }
+  }
 }
