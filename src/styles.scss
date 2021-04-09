@@ -1,5 +1,5 @@
-@import url(assets/utils/_variable.scss);
+@import 'assets/utils/_variable.scss';
 body{
     margin: 0;
-    background: #454545;
+    background: $bg-color;
 }
