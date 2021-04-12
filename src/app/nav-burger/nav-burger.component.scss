@@ -1,11 +1,26 @@
 @import  '../../assets/utils/variable';
 .burger{
-  height: 50px;
-  color: $bg-color;
+  height: 50px;  
   width: 100vw;  
   text-align: center;
   #burger__btn{
     display: none;
+    &:checked{
+      ~ul , ~.burger__bg{
+        left: 0;
+      }
+    }
+  }
+  .burger__bg{
+    height:50px;
+    width: 100vw;
+    background-color: $primary-color;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -110%;
+    transition: .5s;
+    text-align: right;
   }
   #sign-one{
     font-size: 30px;
@@ -17,12 +32,12 @@
   }
   ul{
     list-style: none;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     height: 100vh;
     background: $primary-color;
     margin: 0;
-    left: -110%;
+    left: -100%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -41,15 +56,4 @@
       }
     }
   }
-}
-#burger__btn:checked{
-    ~ul{
-      left:0;   
-    }
-    +#sign-one{
-      color: black;
-    }
-    +.burger{
-      background-color: $primary-color;
-    }
 }

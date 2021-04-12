@@ -22,8 +22,45 @@
     }
     &__arrow{
         justify-self: flex-end;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         align-self: center;
+    }
+}
+.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    &__head{
+        @include Head(45px, $primary-color)
+    }
+    &__photo{
+        height: 10vh;
+        margin-top: 3vh;
+        img{
+            border-radius: 200px;
+            height: 250px;
+            width: 250px;
+            box-shadow: 0px 20.3333px 20.3333px rgba(0, 0, 0, 0.25);
+        }
+    }
+    &__text{
+        background-color: $primary-color;
+        height: 70vh;
+        width: 90vw;
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        span{
+            text-align: center;
+            width: 90%;
+            font-size: 20px;
+            color: $secondary-color;
+            font-family: 'Comic Sans MS';
+            margin-bottom: 5vh;            
+        }        
     }
 }
