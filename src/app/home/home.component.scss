@@ -6,11 +6,13 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    z-index: 50;
     &__text{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-top: -50px;
         @include Head(45px, $primary-color);
         &__underbar{
             @include Underbar(90vw, .2vh, $secondary-color)
