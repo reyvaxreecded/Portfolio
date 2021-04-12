@@ -64,3 +64,19 @@
         }        
     }
 }
+.language{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    &__head{
+        @include Head(45px, $primary-color)
+    }
+    &__logo{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 80vw;
+    }
+}
