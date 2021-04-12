@@ -1,0 +1,29 @@
+@import '../../assets/utils/mixin';
+@import '../../assets/utils/variable';
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    &__text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include Head(45px, $primary-color);
+        &__underbar{
+            @include Underbar(80vw, .2vh, $secondary-color)
+        }
+    }
+    &__secondary__text{
+        margin-top: -10px;
+        @include Head(25px, $primary-color);
+    }
+    &__arrow{
+        justify-self: flex-end;
+        position: absolute;
+        bottom: 0;
+        align-self: center;
+    }
+}
