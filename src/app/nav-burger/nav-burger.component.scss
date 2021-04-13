@@ -63,6 +63,10 @@
       justify-content: space-around;
       svg{
         width: 20vw;
+        @media (min-width: 599px){
+          width: 10vw;
+          margin-top: -15vh;
+        }
       }
     }
   }

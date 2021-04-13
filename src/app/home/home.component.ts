@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private viewPort: ViewportScroller) { }
 
   ngOnInit(): void {
   }
 
+  nextCategory(){
+    const scroll = this.viewPort.getScrollPosition();
+    const height = window.innerHeight;
+    this.viewPort.scrollToPosition([0, scroll[1]+height])
+  }
 }
